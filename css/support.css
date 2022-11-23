@@ -163,6 +163,18 @@
 .input_wrapper input[type="text"]:focus + label {
   left: 85%;
 }
+
+@media (max-width: 500px)
+{
+  .input_wrapper label
+  {
+    width: 25%;
+  }
+  .input_wrapper input[type="text"]:focus + label{
+    left: 75%;
+  }
+}
+
 .textarea_wrapper textarea {
   margin-top: 20px;
   display: block;

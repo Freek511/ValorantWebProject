@@ -187,11 +187,10 @@ footer {
   width: 100%; /*на всю ширину*/
   padding: 20px 50px; /*поля для контента*/
   background: black; /*цвет футера*/
-  display: flex;
   justify-content: center; /*в центре по горизонтали*/
   align-items: center; /*в центре по вертикали*/
   flex-direction: column;
-  margin-top: 50px; /*отступ сверху*/
+  margin-top: 20px;
 }
 .social, .menu
 {
@@ -249,11 +248,13 @@ footer p
 .ft_section
 {
   display: flex;
-  margin: 10px 0;
-  max-width: 100%;
+  margin: 10px auto;
+  width: 10%;
   padding: 8px 12px;
   background: #292929;
   border-radius: 8px;
+  align-items: center;
+  justify-content: center;
 
 }
 .ft-logo
@@ -270,6 +271,17 @@ footer p
 {
   opacity: 1;
   transform: scale(1.1, 1.1);
+}
+
+@media (max-width: 500px){
+  .ft_section{
+    width: 40%;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px ){
+  .ft_section{
+    width: 15%;
+  }
 }
 /*--------------------Footer------------------------------*/
 
@@ -335,6 +347,7 @@ footer p
   font-weight: bold ;
   font-size: 1em;
   letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 .flex-content h5{
   margin: 10px;
