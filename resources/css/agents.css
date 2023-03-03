@@ -5,7 +5,8 @@
   gap: 2rem;
   justify-content: center;
   align-content: center;
-  flex-flow: row nowrap;
+  flex-flow: row;
+  flex-wrap: wrap;
   margin: 5rem 0;
   border-left: 2px solid #292929;
   border-right: 2px solid #292929;
@@ -13,6 +14,7 @@
 
 
 .card {
+  position: relative;
   padding: 10px;
   flex-grow: 2;
   flex-direction: column;
@@ -25,6 +27,31 @@
   margin: 0 15px;
 }
 
+.full-portrait {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+.card .icon {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card h1 {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card .title {
+  opacity: 0;
+  transition: 0.5s;
+}
 
 .card .description {
   opacity: 0;
@@ -34,18 +61,37 @@
   -o-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
   margin: 15px 0;
+  transition: 0.5s;
 }
+
+.card:hover .full-portrait
+{
+  opacity: 0;
+}
+
 .card:hover .description
 {
   opacity: 1;
 }
 
-.card-gallery2:hover .card{
-  filter: opacity(10%);
-}
-.card-gallery2 .card:hover
+.card:hover h1
 {
-  filter: opacity(100%);
+  opacity: 0;
+}
+
+.card:hover .title
+{
+  opacity: 1;
+}
+
+.card:hover .icon
+{
+  opacity: 1;
+}
+
+.card:hover
+{
+  scale: 1.1;
 }
 
 .card-gallery2 .card span{
@@ -189,7 +235,7 @@
   border: none;
   outline: 0;
   display: block;
-  padding: 8px;
+  padding: 4px;
   color: white;
   background-color: #000;
   text-align: center;
@@ -198,7 +244,7 @@
   font-size: 18px;
   transform: translate(0,0);
   transition: 1s all ease;
-  margin: 5px;
+  margin-top: 10px;
 }
 .btn:before{
   background: #ff7675;
