@@ -70,6 +70,7 @@ body {
 
 .menu > li > a {
   text-decoration: none;
+  margin: 0 10% 0 10%;
 }
 
 .navbar__wrap .menu {
@@ -155,6 +156,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     color: #3f3f3f;
+    margin: auto;
   }
 
   .popup .menu > li > a:hover {
@@ -201,15 +203,39 @@ footer {
   margin: 10px 0;
   flex-wrap: wrap;/*разрешен перенос на новую строку*/
 }
-.social li, .menu li
+.social li
 {
   list-style: none;/*удалить черные маркеры*/
+  background: #292929;
+  width: 50px;
+  height: 50px;
+  /* padding: 14px; */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 1em;
+
+}
+.menu li 
+{
+  list-style: none;/*удалить черные маркеры*/
+  /* background: #292929; */
+  width: fit-content;
+  height: fit-content;
+  /* padding: 14px; */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 .social li a
 {
-  font-size: 2em;/*размер иконок*/
+  /* font-size: 2em;размер иконок */
   color: #fff;/*цвет иконок*/
-  margin: 0 10px;
+  /* margin: 0 10px; */
   display: inline-block;/*отображать как строчно-блочный элемент*/
   transition: 0.5s;/*плавный переход*/
 }
@@ -260,27 +286,60 @@ footer p
 .ft-logo
 {
   text-decoration: none;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
   opacity: 0.75;
-  background: #292929;
-  border-radius: 8px;
+  width: 30px;
+  transition: 0.3s;
 }
 .ft-logo:hover
 {
   opacity: 1;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.15, 1.15);
 }
 
 @media (max-width: 500px){
   .ft_section{
     width: 40%;
   }
+  .social li
+  {
+    width: 35px;
+    height: 35px;
+  }
+  .menu li 
+  {
+    width: fit-content;
+    margin: 0.3em 0;
+  }
+  .ft-logo
+  {
+    width: 25px;
+  }
+  .social li 
+  {
+    border-radius: 10px;
+  }
 }
 @media (min-width: 500px) and (max-width: 1000px ){
   .ft_section{
     width: 15%;
+  }
+  .social li
+  {
+    width: 45px;
+    height: 45px;
+  }
+  .menu li 
+  {
+    width: fit-content;
+    margin: 0.5em 0;
+  }
+  .ft-logo 
+  {
+    width: 30px;
+  }
+  .social li 
+  {
+    border-radius: 14px;
   }
 }
 /*--------------------Footer------------------------------*/
