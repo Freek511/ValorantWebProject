@@ -15,7 +15,7 @@
 
 .card {
   position: relative;
-  padding: 10px;
+  padding: 2em;
   flex-grow: 2;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -31,7 +31,7 @@
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 100%;
   
   left: 0;
   right: 0;
@@ -76,7 +76,7 @@
 
 .card:hover h1
 {
-  opacity: 0;
+  opacity: 1;
 }
 
 .card:hover .title
