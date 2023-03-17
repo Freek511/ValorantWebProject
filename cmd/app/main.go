@@ -45,7 +45,7 @@ func support(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.Handle("/style/", http.StripPrefix("/style", http.FileServer(http.Dir("./resources/static"))))
-	http.HandleFunc("/home", home)
+	http.HandleFunc("/", home)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/agents", agents)
 	http.HandleFunc("/support", support)
