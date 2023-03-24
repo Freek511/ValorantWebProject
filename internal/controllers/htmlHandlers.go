@@ -13,6 +13,9 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Println(err)
 	}
+	username := r.FormValue("username")
+	password := r.FormValue("password")
+	fmt.Println(username, password)
 	tem.Execute(w, nil)
 }
 

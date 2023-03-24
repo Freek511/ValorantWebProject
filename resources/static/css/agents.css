@@ -1,0 +1,294 @@
+/*--------------------------Card gallery--------------------------------*/
+.card-gallery2
+{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+  border-left: 2px solid #292929;
+  border-right: 2px solid #292929;
+}
+
+
+.card {
+  position: relative;
+  padding: 2em;
+  flex-grow: 2;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.7s ease-in-out;
+  background: white;
+  border-radius: 8px ;
+  margin: 0 15px;
+}
+
+.full-portrait {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+.card .icon {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card h1 {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card .title {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card .description {
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  margin: 15px 0;
+  transition: 0.5s;
+}
+
+.card:hover .full-portrait
+{
+  opacity: 0;
+}
+
+.card:hover .description
+{
+  opacity: 1;
+}
+
+.card:hover h1
+{
+  opacity: 1;
+}
+
+.card:hover .title
+{
+  opacity: 1;
+}
+
+.card:hover .icon
+{
+  opacity: 1;
+}
+
+.card:hover
+{
+  scale: 1.1;
+}
+
+.card-gallery2 .card span{
+  position: absolute;
+  display: block;
+}
+.card-gallery2 .card span:nth-child(1){
+  opacity: 0;
+  top: 0;
+  left: -100%;
+  width: 10%;
+  height: 2px;
+  animation: none;
+  transition: all 1s;
+}
+@keyframes animate1{
+  0%{
+    left: 0;
+    opacity: 1;
+  }
+  50%
+  {
+    left: 90%;
+    opacity: 0;
+  }
+  100%{
+    left: 100%;
+  }
+}
+.card-gallery2 .card span:nth-child(2){
+  top: 100%;
+  right: 0;
+  width: 2px;
+  height: 10%;
+  animation: none;
+  opacity: 0;
+}
+@keyframes animate2{
+  0%{
+    top: 0%;
+    opacity: 1;
+  }
+  50%
+  {
+    top: 100%;
+    opacity: 0;
+  }
+  100%{
+    top: 110%;
+  }
+}
+.card-gallery2 .card span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  height: 2px;
+  animation: none;
+  opacity: 0;
+}
+@keyframes animate3{
+  0%{
+    right: 0;
+    opacity: 1;
+  }
+  50%
+  {
+    right: 90%;
+    opacity: 0;
+  }
+  100%{
+    right: 280%;
+  }
+}
+
+.card-gallery2 .card span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 10%;
+  animation: none;
+  opacity: 0;
+}
+@keyframes animate4{
+  0%{
+    bottom: 0%;
+    opacity: 1;
+  }
+  50% {
+    bottom: 90%;
+    opacity: 0;
+  }
+  100%{
+    bottom: 280%;
+  }
+}
+
+.card-gallery2 .card:hover span:nth-child(1){
+  background: black;
+  animation: animate1 2s linear infinite;
+}
+.card-gallery2 .card:hover span:nth-child(2){
+  background: black;
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+.card-gallery2 .card:hover span:nth-child(3){
+  background: black;
+  animation: animate3 2s linear infinite;
+}
+.card-gallery2 .card:hover span:nth-child(4){
+  background: black;
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+
+@media only screen and (max-width: 1000px){
+  .card-gallery1{
+    flex-wrap: wrap;
+  }
+  .card-gallery2{
+    flex-wrap: wrap;
+  }
+}
+
+/*--------------------------Card gallery--------------------------------*/
+
+
+/*--------------------------Buttons--------------------------------*/
+.btn{
+  border: none;
+  outline: 0;
+  display: block;
+  padding: 4px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transform: translate(0,0);
+  transition: 1s all ease;
+  margin-top: 10px;
+}
+.btn:before{
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.btn1::before{
+  width: 0;
+  height: 100%;
+}
+
+.btn1:hover::before{
+  width: 100%;
+}
+/*--------------------------Buttons--------------------------------*/
+
+/*--------------------------Main--------------------------------*/
+.main-container{
+  justify-content: center;
+}
+.page_description{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #292929;
+  align-items: center;
+  justify-content: center;
+}
+.page_description img{
+  width: 400px;
+  height: 400px;
+}
+.page_description p{
+  margin: 10px 0;
+  font-style: italic;
+
+}
+/*--------------------------Main--------------------------------*/

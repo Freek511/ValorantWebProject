@@ -54,6 +54,18 @@ func (database *DataBase) GetAllUsers() ([]models.User, error) {
 	return users, nil
 }
 
+func (database *DataBase) Login(username, password string) (models.User, error) {
+	var user models.User
+	row := database.db.QueryRow("SELECT * FROM users WHERE name = ? and password = ?", username, password)
+	if err := row.Scan(&user.ID, &user.Email, &user.Password, &user.Name, &user.Role); err != nil {
+		if err == sql.ErrNoRows {
+			return user, fmt.Errorf("Login %d: no such user", username)
+		}
+		return user, fmt.Errorf("Login %d: %v", username, err)
+	}
+	return user, nil
+}
+
 func (database *DataBase) UserByID(id int) (models.User, error) {
 	var user models.User
 	row := database.db.QueryRow("SELECT * FROM users WHERE id = ?", id)
