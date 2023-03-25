@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./style/css/news.css">
   <link rel="stylesheet" href="./style/css/login.css">
   <link rel="icon" href="favicon.ico" sizes="any">
+  <script src="./style/js/login_redirect.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <header>
@@ -41,21 +43,21 @@
     <input type="checkbox" id="chk" aria-hidden="true">
 
     <div class="signup">
-      <form action="/" method="post">
+      <form id="login">
         <label for="chk" aria-hidden="true">Вход</label>
         <input type="text" name="username" placeholder="Имя пользователя" required="">
         <input type="password" name="password" placeholder="Пароль" required="">
-        <button>Войти</button>
+        <button id="butt_login">Войти</button>
       </form>
     </div>
 
     <div class="login">
-      <form action="/" method="post">
+      <form id="signup">
         <label for="chk" aria-hidden="true">Зарегистрироваться?</label>
         <input type="text" name="username" placeholder="Имя пользователя" required="">
         <input type="email" name="email" placeholder="Почта" required="">
         <input type="password" name="password" placeholder="Пароль" required="">
-        <button>Зарегистрироваться</button>
+        <button id="butt_signup">Зарегистрироваться</button>
       </form>
     </div>
   </div>

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5acb7b4-7375-4803-8067-7c2e5ea6b3ef" name="Changes" comment="Added work with database">
+    <list default="true" id="b5acb7b4-7375-4803-8067-7c2e5ea6b3ef" name="Changes" comment="Added work with login">
+      <change afterPath="$PROJECT_DIR$/resources/static/js/login_redirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/app/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/app/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/controllers/htmlHandlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controllers/htmlHandlers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/database/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/database/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/services/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go Application" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -78,7 +82,8 @@
     <MESSAGE value="Added database struct and some methods" />
     <MESSAGE value="Added go mod and cleared main" />
     <MESSAGE value="Added work with database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added work with database" />
+    <MESSAGE value="Added work with login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added work with login" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
